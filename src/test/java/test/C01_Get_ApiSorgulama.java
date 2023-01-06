@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class C01_Get_ApiSorgulama {
 /*
         https://restful-booker.herokuapp.com/booking/256864
-        url’ine bir GET request gonderdigimizde donen Response’un,
+        url’sine bir GET request gonderdigimizde dönen Response’un,
         status code’unun 200,
         ve content type’inin application/json; charset=utf-8,
         ve Server isimli Header’in degerinin Cowboy,
@@ -19,7 +19,7 @@ public class C01_Get_ApiSorgulama {
     @Test
     public void get01(){
         // 1- Request için URL ve Body hazırla
-        String url= "https://restful-booker.herokuapp.com/booking/256864";
+        String url= "https://restful-booker.herokuapp.com/booking/1343";
 
         //2- Expected datayı hazırla
 
@@ -33,6 +33,9 @@ public class C01_Get_ApiSorgulama {
         System.out.println("Server Header'inin degeri : " + response.getHeader("Server"));
         System.out.println("Status Line : " + response.getStatusLine());
         System.out.println("Response suresi  : " + response.getTime());
+
+
+        //4-Assertion
 
     }
     }

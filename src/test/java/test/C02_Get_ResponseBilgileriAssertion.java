@@ -13,14 +13,13 @@ public class C02_Get_ResponseBilgileriAssertion {
         ve content type’inin application/json; charset=utf-8,
         ve Server isimli Header’in degerinin Cowboy,
         ve status Line’in HTTP/1.1 200 OK
-        olduğunu test edin
+        olduğunu test edin.
          */
     @Test
     public void get02(){
-        //1- Request Url ve Body hazırla
 
         // 1- Request için URL ve Body hazırla
-        String url= "https://restful-booker.herokuapp.com/booking/256864";
+        String url= "https://restful-booker.herokuapp.com/booking/1386";
 
         //2- Expected datayı hazırla
 
