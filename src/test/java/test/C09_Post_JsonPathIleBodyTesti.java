@@ -81,5 +81,7 @@ public class C09_Post_JsonPathIleBodyTesti {
                         "booking.bookingdates.checkin",equalTo("2021-06-01"),
                         "booking.bookingdates.checkout",equalTo("2021-06-10"),
                         "booking.additionalneeds",equalTo("wi-fi"));
+
+        // body'nin içerisinde yapılan sorgularda matcher classını kullanmak zorunludur.(equal to)
     }
 }

@@ -28,7 +28,7 @@ public class C11_Get_ExpectedDataOlusturma {
         //1- Request URL ve body hazırla
         String url=" http://jsonplaceholder.typicode.com/posts/22";
 
-        //2- Expected body hazırla
+        //2- Expected data hazırla
         JSONObject expBody=new JSONObject();
         expBody.put("userId",3);
         expBody.put("id",22);
@@ -45,6 +45,9 @@ public class C11_Get_ExpectedDataOlusturma {
 
         JsonPath respJSPath=response.jsonPath();
         assertEquals(expBody.get("userId"),respJSPath.getInt("userId"));
+        assertEquals(expBody.get("id"),respJSPath.getInt("id"));
+        assertEquals(expBody.get("title"),respJSPath.getInt("title"));
+        assertEquals(expBody.get("body"),respJSPath.getInt("body"));
 
     }
 }

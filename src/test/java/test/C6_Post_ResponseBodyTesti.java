@@ -49,7 +49,7 @@ public class C6_Post_ResponseBodyTesti {
         System.out.println(reqBody);
 
         //2- soruda verilmişse expected datayı hazırla
-        // 3- Response2u kaydet
+        // 3- Response'u kaydet
 
         Response response=given().
                                     contentType(ContentType.JSON).
