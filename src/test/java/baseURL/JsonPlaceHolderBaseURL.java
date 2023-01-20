@@ -15,6 +15,7 @@ public class JsonPlaceHolderBaseURL {
                                 build();
 
         //url değişirse burdan değiştirilir
+
     }
 
 }

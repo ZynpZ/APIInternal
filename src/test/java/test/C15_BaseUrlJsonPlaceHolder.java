@@ -6,8 +6,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.*;
 
 public class C15_BaseUrlJsonPlaceHolder extends JsonPlaceHolderBaseURL {
 
@@ -65,8 +64,6 @@ public class C15_BaseUrlJsonPlaceHolder extends JsonPlaceHolderBaseURL {
                 assertThat().
                 statusCode(200).
                 body("title", equalTo("optio dolor molestias sit"));
-
-
     }
 
     @Test
@@ -78,10 +75,17 @@ public class C15_BaseUrlJsonPlaceHolder extends JsonPlaceHolderBaseURL {
             response body’sinin null oldugunu test edin
          */
 
+        //1- url ve body hazırla, get metodunda body ihtiyacı yok
+        specJsonPlace.pathParams("pp1","posts","pp2",50);
+
+        //2- expected data hazırla (bu soruda öyle bişey belirtilmediği için geçiyoruz
+        //3- Response'u kaydet
+        Response response= given().spec(specJsonPlace).when().delete("/{pp1}/{pp2}");
+
+        response.prettyPrint();
+
+        //4- assertion
+        response.then().assertThat().statusCode(200).body("body", nullValue());
+
     }
-
-
-
-
-
 }
