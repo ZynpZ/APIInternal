@@ -5,7 +5,7 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
 public class HerokuAppBaseUrl {
-    protected RequestSpecification specHerokuApp; //değiştirilmesin diye protected yapıyoruz.
+    protected RequestSpecification specHerokuApp; //görülebilsin ama değiştirilmesin diye protected yapıyoruz.
 
     @Before
     public void setUp(){
