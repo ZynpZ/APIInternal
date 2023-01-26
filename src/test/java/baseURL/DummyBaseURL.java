@@ -6,7 +6,6 @@ import org.junit.Before;
 
 public class DummyBaseURL {
 
-    public int_statusCode=
 
     protected RequestSpecification specDummy;
 
